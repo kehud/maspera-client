@@ -1,0 +1,18 @@
+<p>Appointment List</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#ID</th>
+      <th>Name</th>
+      <th>Phone No.</th>
+      <th>Appointment Date</th>
+      <th>Work Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr app-appointment-grid-item [appointmentsModelItem] = 'appointmentsModelItem' 
+      *ngFor="let appointmentsModelItem of appointmentsModelRecords" >
+    </tr>
+  </tbody>
+</table>

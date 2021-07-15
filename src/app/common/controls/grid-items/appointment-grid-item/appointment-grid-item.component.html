@@ -1,0 +1,9 @@
+<td>{{ appointmentsModelItem.ID }}</td>
+<td>{{ appointmentsModelItem.FirstName + " " + appointmentsModelItem.LastName}}</td>
+<td>{{ appointmentsModelItem.PhoneNumber }}</td>
+<td>{{ appointmentsModelItem.AppointmentDate }}</td>
+<td>{{ appointmentsModelItem.WorkType }}</td>
+<td app-appointment-action-buttons 
+    (detailsButtonClicked)="OpenDetailsForm(appointmentsModelItem)"
+    (editButtonClicked)="OpenEditForm(appointmentsModelItem)"
+    ></td>

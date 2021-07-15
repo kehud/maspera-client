@@ -1,0 +1,71 @@
+<div style="height: 80px;"></div>
+
+<div class="container">
+    <div class="row g-5">
+        <form class="needs-validation" novalidate="" >
+            <div class="row g-3">
+
+                <div class="col-md-3">
+                    <label for="country" class="form-label">Appiontment date</label>
+
+                    <div class="col-xs-12 col-12 col-md-4 form-group">
+                        <input type="text"
+                              class="form-control"
+                              placeholder="Datepicker"
+                              [(ngModel)]="date"
+                              name='date'
+                              bsDatepicker>
+                      </div>
+
+                    <div class="invalid-feedback">
+                    Please select a valid date.
+                    </div>
+                    
+                </div>
+
+
+                <div class="col-md-4">
+                    <label for="country" class="form-label">Appiontment date</label>
+
+                    <timepicker name='time' [(ngModel)]="time"></timepicker>
+
+                    <div class="invalid-feedback">
+                    Please select a valid date.
+                    </div>
+                    
+                </div>
+                
+
+
+                <div class="col-md-5">
+                    <label for="Worktype" class="form-label">Work type</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>{{ selectedAppointmentsModel.WorkType }}</option>
+                        <!-- <option value="">Choose...</option> -->
+                        <option value="item.ID" *ngFor="let item of workTypesModel">{{ item.WorkType }}</option>
+                    </select>
+                    <div class="invalid-feedback">
+                    Please select a valid Work type.
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <label for="CustomerName" class="form-label">Customer Name</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>{{selectedAppointmentsModel.FirstName + " " +  selectedAppointmentsModel.LastName}}</option>
+                        <!-- <option value="">Choose...</option> -->
+                        <option value="item.ID" *ngFor="let item of customersModel">{{ item.FirstName + " " + item.LastName }}</option>
+                    </select>
+                    <div class="invalid-feedback">
+                    Please select a valid customer name.
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Update appiontment</button>
+        </form>
+    </div>
+</div>
